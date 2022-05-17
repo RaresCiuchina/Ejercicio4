@@ -14,7 +14,7 @@ class Ejercicio4Test {
         for (Pokemon poke : ej.arrayPokemons){
             System.out.println(poke);
         }
-    }
+     }
 
 
     @BeforeEach
@@ -62,7 +62,7 @@ class Ejercicio4Test {
     }
 
 
-    /* ___________________________________________________________*/
+    /* ______________ _____________________________________________*/
     @Test
     void getPokemonMenosGordo() {
         Pokemon[] pokemonEsperados = {
@@ -157,7 +157,7 @@ class Ejercicio4Test {
     }
 
 
-    /*---------------------------------------------------------------------------------*/
+    /*---------------- -----------------------------------------------------------------*/
     @Test
     void pokemonNombreMasCorto(){
         //Comprueba que devuelva los pokemon con nombre mas corto que la longitud dada
