@@ -28,6 +28,19 @@ public class Ejercicio4 {
         return getArraySinNulos(out, i);
        }
 
+    public Pokemon[] getPokemonMenosGordo (int peso) {
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            if (pokemon.getWeight() < peso) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+        return getArraySinNulos(out, i);
+
+    }
+
     public Pokemon[] getPokemonQueContengaLasSiguientesLetras(String letras)  {
         Pokemon[] out = new Pokemon[arrayPokemons.length];
         int i = 0;
@@ -48,17 +61,11 @@ public class Ejercicio4 {
         }
         return getArraySinNulos(out, i);
     }
-    // Atención, esta operación debe devolver un array de pokemons vacio si letras fuera null.
 
-    // No hay que tener en cuenta el orden
     public Pokemon[] getArraySinNulos(Pokemon[] pokemons, int comienzoNulos) {
         return Arrays.copyOfRange(pokemons, 0, comienzoNulos);
     }
 
-
-    /*
-    Calculandolo tu mismo
-     */
     public Pokemon[] getArraySinNulos(Pokemon[] pokemons) {
         int comienzoNulos = 0;
         while (comienzoNulos < pokemons.length) {
@@ -69,6 +76,44 @@ public class Ejercicio4 {
             }
         }
         return Arrays.copyOfRange(pokemons, 0, comienzoNulos);
+    }
+
+    public Pokemon[] getPokemonPesoEntre(int pesoMaximo, int pesoMinimo){
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            if (pokemon.getWeight() < pesoMaximo && pokemon.getWeight()>pesoMinimo) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+        return getArraySinNulos(out, i);
+    }
+
+    public Pokemon[] getPokemonNombreMasLargoQue(int longitudDelTexto) {
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            if (pokemon.getName().length() > longitudDelTexto) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+        return getArraySinNulos(out, i);
+
+    }
+
+    public Pokemon[] getPokemonNombreMasCortoQue(int longitudDelTexto) {
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            if (pokemon.getName().length() < longitudDelTexto) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+        return getArraySinNulos(out, i);
+
     }
 
 }

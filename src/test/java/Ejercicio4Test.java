@@ -11,6 +11,9 @@ class Ejercicio4Test {
         System.out.println("firstInit");
         ej = new Ejercicio4();
         ej.arrayPokemons = ObtenerPokemonsRequest.Companion.get(1,9);
+        for (Pokemon poke : ej.arrayPokemons){
+            System.out.println(poke);
+        }
     }
 
 
@@ -35,6 +38,14 @@ class Ejercicio4Test {
         Pokemon[] pokemonActuales = ej.pokemonMasGordosQue(250);
         Assertions.assertArrayEquals(pokemonEsperados, pokemonActuales);
     }
+
+    @Test
+    void pokemonMasGordosQue02() {
+        Pokemon[] pokemonEsperados = new Pokemon[0];
+        Pokemon[] pokemonActuales = ej.pokemonMasGordosQue(3000);
+        Assertions.assertArrayEquals(pokemonEsperados, pokemonActuales);
+    }
+
 
     @Test
     void getPokemonQueContengaLasSiguientesLetras() {
