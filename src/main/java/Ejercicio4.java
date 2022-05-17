@@ -26,7 +26,7 @@ public class Ejercicio4 {
             }
         }
         return getArraySinNulos(out, i);
-    }
+       }
 
     public Pokemon[] getPokemonQueContengaLasSiguientesLetras(String letras)  {
         Pokemon[] out = new Pokemon[arrayPokemons.length];
